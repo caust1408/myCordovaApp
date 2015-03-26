@@ -13,6 +13,10 @@
         alert("Employee Directory v3.4");
     });
 
+    document.addEventListener('deviceready' , function() {
+	    FastClick.attach(document.body);
+    });
+
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName() {
         service.findByName($('.search-key').val()).done(function (employees) {
